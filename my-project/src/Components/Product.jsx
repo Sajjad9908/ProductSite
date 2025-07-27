@@ -58,11 +58,11 @@ const Product = () => {
         </AnimatePresence>
 
       </div>
-      <div className='m-auto w-[72] flex items-center mt-10  p-7'>
+      <div className='m-auto w-[72] flex items-center mt-10 mobile:w-80 mobile:p-6'>
         
         <motion.button
           whileTap={{ scale: 0.95 }}
-          className='bg-red-500 w-72 p-3 rounded-2xl text-white cursor-pointer m-auto'
+          className='bg-red-500 tablet:w-72 p-3 rounded-2xl text-white cursor-pointer mobile:w-80 mobile:p-6'
           onClick={() => setShowall(!showall)}
         >
           {showall ? 'Show Less' : 'View All Products'}
