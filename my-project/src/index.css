@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat",serif;
+  --font-playfair: "Playfair Display", serif;
+
+  --breakpoint-mobile: 17.5rem;
+  --breakpoint-tablet: 30rem;
+  --breakpoint-laptop: 62.25rem;
+  --breakpoint-desktop: 92.5rem;
+  --breakpoint-large-desktop: 160rem;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans); /* Montserrat for body text */
+  }
+
+  h1, h2, h3, h4, h5, h6,p {
+    font-family: var(--font-playfair); /* Playfair for headings */
+  }
+}
+
+
+.swiper-pagination{
+  z-index: 1000 !important;
+  position: absolute !important;
+  bottom: -3px !important;
+  opacity: 2 !important;
+}
+.swiper-pagination-bullet{
+      margin-bottom: 165px !important;
+     
+
+  background:red !important;
+  opacity: 1 !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  transition: background-color 0.3s ease !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+.swiper-pagination-bullet-active{
+  background: white !important;
+}
+
+
+@media (max-width:30rem){
+  .swiper-pagination-bullet{
+    margin: auto;
+    margin-bottom: 49px !important;
+  
+  }
+
+}
+body{
+  overflow-x: hidden;
+}
